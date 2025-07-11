@@ -1,0 +1,19 @@
+/* Normal folder icon */
+#personal-bookmarks .bookmark-item[container] .toolbarbutton-icon {
+  list-style-image: url("default_folder.svg") !important;
+  -moz-image-region: auto !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Opened folder icon when hovered or active (optional) */
+#personal-bookmarks .bookmark-item[container]:hover .toolbarbutton-icon,
+#personal-bookmarks .bookmark-item[container][open] .toolbarbutton-icon {
+  list-style-image: url("default_folder_opened.svg") !important;
+}
+
+/* Blur Tab Bar */
+#TabsToolbar {
+  background: rgba(30, 30, 30, 0.5) !important;
+  backdrop-filter: blur(10px);
+}

@@ -1,0 +1,81 @@
+[include]
+  path = .gitconfig.local
+
+[core]
+    # detects filemode changes
+    filemode = true
+    # defaults to $VISUAL or $EDITOR which is set in .bash.d/env.sh
+    #editor = vim
+    # global .gitignore
+    excludesfile = ~/.gitignore
+    # stops unicode chars coming out as \xxx and double quoted filenames in git status (used in .bash.d/git.sh git_rm_untracked function)
+    quotePath = false
+    #whitespace = trailing-space,space-before-tab
+
+[pull]
+    rebase = false
+
+[push]
+#   default = current
+    default = simple
+
+[commit]
+    gpgsign = true
+
+[homebrew]
+    donationmessage = false
+
+# ============================================================================ #
+#                               G i t   C o l o r
+# ============================================================================ #
+
+[color]
+    ui     = auto
+    diff   = auto
+    grep   = auto
+    # do not set always here, use:
+    # -c color.status=always
+    # for specific overrides, otherwise may break gitci and related functions
+    status = auto
+    branch = auto
+
+[color "branch"]
+    current     = green ul
+    local       = yellow
+    remote      = red        # default
+    plain       = normal
+
+[color "diff"]
+    new         = green
+    old         = red        # default
+    plain       = normal
+    whitespace  = yellow reverse
+    func        = yellow
+    #frag        = cyan       # default
+    #meta        = green bold # default
+    # from diff-so-fancy
+    meta = 11
+    frag = magenta bold
+
+[color "grep"]
+    context     = normal
+    filename    = cyan
+    function    = yellow
+    linenumber  = normal
+    match       = white magenta
+    selected    = green
+    separator   = normal
+
+[color "status"]
+    added       = white blue
+    changed     = magenta
+    untracked   = cyan
+    branch      = magenta blink
+    nobranch    = red blink
+
+# ============================================================================ #
+#                   C r e d e n t i a l s   H e l p e r s
+# ============================================================================ #
+
+[credential]
+    helper = store
